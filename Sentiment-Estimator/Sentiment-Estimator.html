@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sentiment Estimator</title>
+  <style>
+    #textfield {
+      padding: 1em;
+      border-radius: 2em;
+    }
+    #icon {
+      transform: translateY(0.7em);
+      margin-left: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sentiment Estimator</h1>
+  <div>
+    <input 
+      id="textfield" 
+      type="text"
+      placeholder="enter sentiment here..."
+      value="happy"
+
+      onkeyup="checkSentiment()"
+      /> 
+    <img 
+      id="icon"  
+      src="images/Help-icon.png" 
+    />
+  </div>
+
+
+  <script>
+        function checkSentiment () {
+
+          // FUNCTION ALGORITHM
+      
+          // 1.reads the value from the input
+          //HW: eliminate extra space
+          let phrase = textfield.value.trim() 
+          //HW: ignore casing
+          phrase = phrase.toLowerCase()
+      
+        // 2.compares the referenced values
+          if (phrase == 'love' || 'I love' || 'heart') { 
+          // 3.sets the corresponding image
+          icon.src = 'images/Heart-icon.png'
+          } else if (phrase == 'happy') {
+          // 3.sets the corresponding image
+          icon.src = 'images/Emotes-face-smile-big-icon.png'
+          } else if (phrase == 'angry') {
+          // 3.sets the corresponding image
+          icon.src = 'images/angry-icon.png'
+          } else if (phrase == 'cry') {
+          // 3.sets the corresponding image
+          icon.src = 'images/cry-icon.png'
+          } else if (phrase == 'sad') {
+          // 3.sets the corresponding image
+          icon.src = 'images/Emotes-face-sad-icon.png'
+          } else if (phrase == 'cool') {
+          // 3.sets the corresponding image
+          icon.src = 'images/Smiley-cool-icon.png'
+          } else {
+            icon.src = 'images/Help-icon.png'
+          }
+          
+          console.log('Checking sentiment')
+        }
+  </script>
+</body>
+</html>
