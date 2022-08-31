@@ -44,22 +44,22 @@
           phrase = phrase.toLowerCase()
       
         // 2.compares the referenced values
-          if (phrase == 'love' || 'I love' || 'heart') { 
+          if (phrase === 'love' || phrase === 'I love' || phrase === 'heart') { 
           // 3.sets the corresponding image
           icon.src = 'images/Heart-icon.png'
-          } else if (phrase == 'happy') {
+          } else if (phrase === 'happy' || phrase === ':)') {
           // 3.sets the corresponding image
           icon.src = 'images/Emotes-face-smile-big-icon.png'
-          } else if (phrase == 'angry') {
+          } else if (phrase === 'angry') {
           // 3.sets the corresponding image
           icon.src = 'images/angry-icon.png'
-          } else if (phrase == 'cry') {
+          } else if (phrase === 'cry') {
           // 3.sets the corresponding image
           icon.src = 'images/cry-icon.png'
-          } else if (phrase == 'sad') {
+          } else if (phrase === 'sad' || phrase === ':(') {
           // 3.sets the corresponding image
           icon.src = 'images/Emotes-face-sad-icon.png'
-          } else if (phrase == 'cool') {
+          } else if (phrase === 'cool') {
           // 3.sets the corresponding image
           icon.src = 'images/Smiley-cool-icon.png'
           } else {
